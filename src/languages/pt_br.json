@@ -1,0 +1,6 @@
+{
+    "translation": {
+        "greeting-title": "Olá {{name}}, eu sou um título",
+        "home-page-title": "Págnia inicial"
+    }
+}
