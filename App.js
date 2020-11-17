@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
 import { Provider } from "@ant-design/react-native";
@@ -42,9 +42,11 @@ export default function App() {
 
   function renderContent() {
     return (
-      <Provider theme={theme}>
-        <RootNavigator screenProps={{ changeTheme, currentTheme }} />
-      </Provider>
+      <Suspense fallback={<AppLoading />}>
+        <Provider theme={theme}>
+          <RootNavigator screenProps={{ changeTheme, currentTheme }} />
+        </Provider>
+      </Suspense>
     );
   }
 

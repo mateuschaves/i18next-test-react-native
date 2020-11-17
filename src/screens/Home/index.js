@@ -8,6 +8,7 @@ export default function Home() {
   const [t, i18n] = useTranslation();
 
   function handleChangeLanguage(language) {
+    console.log(i18n);
     i18n.changeLanguage(language);
   }
 
